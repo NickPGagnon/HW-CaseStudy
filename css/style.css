@@ -1,0 +1,271 @@
+.grid {
+    display: grid;
+    height:200px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "navbar navbar navbar navbar"
+    "title title title ."
+    " . card1 card1 ."
+    "leftCard leftCard rightCard rightCard"
+    " fullWidth fullWidth fullWidth fullWidth"
+    ". design design ."
+    ; 
+}
+.navigate {
+    grid-area: navbar;
+    color: rgb(218, 218, 218);
+    font-family: 'Carrois Gothic SC', sans-serif;
+    border-bottom: rgb(56, 208, 255) solid 5px ;
+    border-bottom-width: 100%;
+    height: 60px;
+    margin-top: -20px;
+}
+.navbar {
+    color: white;
+    font-family: 'Carrois Gothic SC', sans-serif;
+    float: left; 
+    padding-right: 20px;
+    transition  : all 0.5s ease;
+}
+.navbar:hover {
+    color: rgb(255, 112, 255) ;
+    border-bottom: rgb(255, 112, 255)  solid 16px;
+}
+.contact {
+    margin-left: 20px;
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+.contact:hover{
+    color: rgb(0, 255, 64);
+    border-bottom: rgb(0, 255, 64) solid 16px;
+        
+}
+.photography {
+    white-space: nowrap;
+    display: inline-block;
+    margin-left: 20px;
+    transition: all 0.5s ease;
+}
+.photography:hover{
+    color: rgb(255, 118, 27);
+    border-bottom:  rgb(255, 118, 27) solid 16px;
+}
+.portfolio {
+    white-space: nowrap;
+    display: inline-block;
+    margin-left: 20px;
+    transition: all 0.5s ease;
+    color:rgb(56, 208, 255);
+    border-bottom:  rgb(56, 208, 255) solid 16px;
+}
+.ptitle {
+    grid-area: title;
+    color: white;
+    font-family: 'Lobster', cursive;
+    font-size: 60px;
+    color: rgb(56, 208, 255);
+}
+body {
+    width: 100%;
+    margin: 0;
+}
+.topCard {
+    grid-area: card1;
+    box-shadow: 0 4px 8px 0 rgba(122, 211, 221, 0.49);
+    transition: all 0.5s ease;
+    background-color: rgb(56, 208, 255);
+    border-radius: 15px;
+    height: 400px;
+    overflow: hidden;
+    
+}
+.topCard:hover {
+    box-shadow: 0 8px 16px 0 rgba(122, 211, 221, 0.49);
+    transform:scale(1.05);  
+    background-color: #aaffff;
+}
+
+.case1pic {
+    height: 80%;
+    width: 100%;
+    background-image:url("images/1.png");
+    background-color: pink;
+    background-size: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    animation: animate 10s linear infinite;
+    background-repeat: repeat-y;    
+}
+@keyframes animate {
+    
+    from {
+        background-position: 0 -200px;
+    }
+    to {
+        background-position: 0 434px;
+    }
+}
+.card1Contain {
+    padding 2px 16px;
+    margin-top: -35px;
+}
+.card1text {
+    text-align: center;
+    font-size: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+.card1p { 
+    margin-top: -30px;
+    text-align: center;
+    padding: 3px;
+    font-size-adjust: auto;
+}
+.cardP {
+    font-family: open-sans, sans-serif;
+}
+.leftCard {
+    grid-area: leftCard;
+    height: 400px;
+    background-color: rgb(56, 208, 255);
+    margin-top: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    transition: all 0.5s ease; 
+    overflow: hidden;
+    margin-right: 10px;
+    
+}
+.leftText {
+    padding-left: 20px;
+    height: 45%;
+}
+.leftImage {
+    width:100%;
+    height: 50%;
+    border-bottom-left-radius: 20px;
+    object-fit: cover;
+    transition: all 1s ease;
+    
+}
+.leftImage:hover {
+    height: 100%;
+    border-top-left-radius: 20px;
+    margin-top:-200px;
+}
+.cardHeader {
+    font-family: 'Carrois Gothic SC', sans-serif;
+}
+.rightCard{
+    grid-area: rightCard;
+    height: 400px;
+    background-color: rgb(56, 208, 255);
+    margin-top: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 10px;
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+.rightText {
+    padding: 20px;
+}
+.rightImage {
+    width:100%;
+    height: 50%;
+    object-fit: cover;
+    background-color: lightgreen;
+    border-top-right-radius: 20px;
+    transition: all 1s ease;
+    
+}
+.rightImage:hover {
+    height: 100%;
+    object-fit: scale-down;
+    border-bottom-right-radius: 20px;
+    background-color: #aaffff;
+}
+.fullWidth {
+    background-color: rgb(56, 208, 255);
+    grid-area: fullWidth;
+    height: 400px;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.fullpic {
+    background-image: url("images/wireframe3.png");
+    width: 100%;
+    height: 50%;
+    background-size: contain;
+    transition: all 0.5s ease;
+    
+}
+.fullpic:hover{
+    background-size: contain;
+    height: 80%;
+    animation: scrollX 120s linear infinite;
+    background-repeat: repeat-x;
+    background-color: lightgoldenrodyellow;
+}
+@keyframes scrollX {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 10000px 0;
+    }
+
+}
+.fullH {
+    text-align: center;
+    
+}
+.fullP {
+    text-align: center;
+    padding: 20px;
+    padding-left: 400px;
+    padding-right: 400px;
+    
+}
+.design {
+    grid-area: design;
+    height: 400px;
+    border-radius: 20px;
+    background-color: rgb(56, 208, 255);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.designImg {
+    background-image: url(images/mockup2.jpg);
+    height: 60%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.2s ease;
+    background-repeat: no-repeat;
+}
+.designImg:hover {
+    background-image: url(images/styleG.png);
+    height: 70%;
+    background-size: contain;
+    background-repeat: space;
+    background-color: white;
+}
+.designH {
+    text-align: center;
+    padding 5px;
+}
+.designP {
+    text-align: center;
+    padding: 5px;
+    margin-top: -5px;
+}
