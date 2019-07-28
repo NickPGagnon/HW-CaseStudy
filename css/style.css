@@ -143,19 +143,23 @@ body {
 .leftText {
     padding-left: 20px;
     height: 45%;
+    z-index: 2;
 }
-.leftImage {
+.leftImg {
     width:100%;
     height: 50%;
     border-bottom-left-radius: 20px;
-    object-fit: cover;
+    border-bottom-right-radius: 20px;
+    background-image: url(images/Survey.png);
+    background-size: cover;
     transition: all 1s ease;
     
 }
-.leftImage:hover {
+.leftImg:hover {
     height: 100%;
     border-top-left-radius: 20px;
-    margin-top:-200px;
+    margin-top: -200px;
+    z-index: ; 
 }
 .cardHeader {
     font-family: 'Carrois Gothic SC', sans-serif;
