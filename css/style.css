@@ -143,6 +143,7 @@ body {
 .leftText {
     padding-left: 20px;
     height: 45%;
+
 }
 .leftImage {
     width:100%;
@@ -175,6 +176,7 @@ body {
 }
 .rightText {
     padding: 20px;
+    margin-top: -20px;
 }
 .rightImage {
     width:100%;
@@ -232,8 +234,8 @@ body {
 .fullP {
     text-align: center;
     padding: 20px;
-    padding-left: 400px;
-    padding-right: 400px;
+    padding-left: 100px;
+    padding-right: 100px;
     
 }
 .design {
@@ -269,4 +271,27 @@ body {
     text-align: center;
     padding: 5px;
     margin-top: -5px;
+}
+p {
+    font-size: 12px;
+}
+@media screen and (max-width: 1000) {
+
+.grid {
+    display: grid;
+    height:200px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-areas:
+    "navbar navbar navbar"
+    "title title title "
+    " . card1 card1 ."
+    "leftCard leftCard leftCard"
+    "rightCard rightCard rightCard"
+    " fullWidth fullWidth fullWidth"
+    "design design design "
+    ; 
+}
+    
+
 }
