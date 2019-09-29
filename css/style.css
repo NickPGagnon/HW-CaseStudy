@@ -275,23 +275,4 @@ body {
 p {
     font-size: 12px;
 }
-@media screen and (max-width: 1000) {
 
-.grid {
-    display: grid;
-    height:200px;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-areas:
-    "navbar navbar navbar"
-    "title title title "
-    " . card1 card1 ."
-    "leftCard leftCard leftCard"
-    "rightCard rightCard rightCard"
-    " fullWidth fullWidth fullWidth"
-    "design design design "
-    ; 
-}
-    
-
-}

@@ -4,11 +4,31 @@
 <HTML>
 <title> Previous Case's</title>
 <head> 
+
     <link rel="stylesheet" href="https://use.typekit.net/rks5avx.css">
     <style>
        body {
            background-color:rgb(29, 29, 29);
        } 
+        
+        @media screen and (max-width: 1000) {
+
+.grid {
+    display: grid;
+    height:200px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-areas:
+    "navbar navbar navbar"
+    "title title title "
+    " . card1 card1 ."
+    "leftCard leftCard leftCard"
+    "rightCard rightCard rightCard"
+    " fullWidth fullWidth fullWidth"
+    "design design design "
+    ; 
+}
+}
     </style>
 </head>
 <body>
